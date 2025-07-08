@@ -1,4 +1,4 @@
-#a ) Replace Sudo with OpenDoas
+# a ) Replace Sudo with OpenDoas
 
 - The package is called `opendoas` and is present at almost any major Linux distro!
 - Steps are 0 ) adding the user to the wheel grp (should be default most cases), 1) adding that grp and allowing longer persistence before timeouts & 2-3) disabling the sudo binary
@@ -16,13 +16,13 @@ sudo chmod 0 /usr/bin/sudo
 doas chattr +i /usr/bin/sudo
 ```
 
-#b) In case you wanna reenable sudo some day
+# b) In case you wanna reenable sudo some day
 ```
 doas chmod 4711 /usr/bin/sudo
 doas chattr -i /usr/bin/sudo
 ```
 
-#c) NixOS version
+# c) NixOS version
 
 ```
 # service
